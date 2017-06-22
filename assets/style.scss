@@ -1,0 +1,91 @@
+// Load fonts
+// @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+
+
+// Geral theme
+body {
+  background-color: #F3F6F8;
+  // font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  transition: all .2s;
+}
+
+#wpbody-content .wrap {
+
+  > h1 {
+    font-size: 2.5em;
+    // text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.edit-php,
+.post-php,
+.users-php,
+.edit-comments-php,
+.options-general-php,
+.plugins-php {
+
+  #wpbody-content .wrap {
+    max-width: 1150px;
+    margin: 10px auto;
+    padding-right: 1rem;
+  }
+}
+
+div.postbox  {
+  border: 0;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+
+  .hndle {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 1rem;
+    opacity: .75;
+  }
+}
+
+.row-title {
+  color: inherit;
+}
+
+
+// Single posts
+
+#wp-content-editor-tools {
+  background-color: #F3F6F8;
+}
+
+// Remove unused post boxes
+.postbox#commentsdiv,
+.postbox#slugdiv,
+.postbox#slugdiv,
+.postbox#trackbacksdiv,
+.post-php .postbox#postexcerpt,
+.postbox#postcustom {
+  display: none !important;
+}
+
+
+// Remove dashboard widgets
+
+#dashboard_quick_press,
+#dashboard_activity,
+#dashboard_primary {
+  display: none !important;
+}
+
+
+
+
+// Beaver builder
+
+.fl-settings-heading img {
+  display: none !important;
+}

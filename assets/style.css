@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+body {
+  background-color: #F3F6F8;
+  font-family: 'Lato', sans-serif; }
+
+a {
+  transition: all .2s; }
+
+#wpbody-content .wrap > h1 {
+  font-size: 2.5em;
+  font-weight: 300;
+  margin-bottom: 0.5rem; }
+
+.edit-php #wpbody-content .wrap,
+.post-php #wpbody-content .wrap,
+.users-php #wpbody-content .wrap,
+.edit-comments-php #wpbody-content .wrap,
+.options-general-php #wpbody-content .wrap,
+.plugins-php #wpbody-content .wrap {
+  max-width: 1150px;
+  margin: 10px auto;
+  padding-right: 1rem; }
+
+div.postbox {
+  border: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }
+  div.postbox .hndle {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 1rem;
+    opacity: .75; }
+
+.row-title {
+  color: inherit; }
+
+#wp-content-editor-tools {
+  background-color: #F3F6F8; }
+
+.postbox#commentsdiv,
+.postbox#slugdiv,
+.postbox#slugdiv,
+.postbox#trackbacksdiv,
+.post-php .postbox#postexcerpt,
+.postbox#postcustom {
+  display: none !important; }
+
+#dashboard_quick_press,
+#dashboard_activity,
+#dashboard_primary {
+  display: none !important; }
+
+.fl-settings-heading img {
+  display: none !important; }
