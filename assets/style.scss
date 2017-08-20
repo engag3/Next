@@ -1,25 +1,27 @@
 // Load fonts
 // @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
-@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=roboto:100,300,400,700,900');
 
 
 // Geral theme
 body {
   background-color: #F3F6F8;
   // font-family: 'Roboto', sans-serif;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 a {
   transition: all .2s;
+  text-decoration: none;
+  font-weight: 400;
 }
 
 #wpbody-content .wrap {
 
   > h1 {
-    font-size: 2.5em;
+    font-size: 2.25em;
     // text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 600;
     margin-bottom: 0.5rem;
   }
 }
@@ -29,26 +31,57 @@ a {
 .users-php,
 .edit-comments-php,
 .options-general-php,
-.plugins-php {
+.plugins-php,
+.post-type-product,
+.post-new-php,
+.user-edit-php,
+.profile-php,
+.taxonomy-category,
+.woocommerce_page_wc-settings,
+.woocommerce_page_wc-status {
 
   #wpbody-content .wrap {
-    max-width: 1150px;
+    max-width: 1000px;
     margin: 10px auto;
     padding-right: 1rem;
   }
 }
 
+
+#adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap {
+  width: 200px;
+}
+
+#wpcontent, #wpfooter {
+  margin-left: 200px;
+}
+
+#adminmenu .wp-submenu {
+  left: 200px;
+}
+
+// Post Box
+
 div.postbox  {
   border: 0;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  box-shadow: 0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15);
+  border-radius: 4px;
 
   .hndle {
-    text-transform: uppercase;
-    font-weight: 400;
+    // text-transform: uppercase;
+    font-weight: 600;
     letter-spacing: 1px;
     padding: 1rem;
     opacity: .75;
+    border-bottom: 0;
+    padding: 14px 12px !important;
   }
+}
+
+.postbox .handlediv {
+  height: 45px;
+  width: 45px;
+  opacity: .5;
 }
 
 .row-title {
@@ -58,9 +91,105 @@ div.postbox  {
 
 // Single posts
 
+#titlediv #title {
+  height: 2.7em;
+}
+
+#titlediv #title-prompt-text {
+  padding: 20px 10px;
+}
+
 #wp-content-editor-tools {
   background-color: #F3F6F8;
 }
+
+#edit-slug-buttons {
+  margin-left: .5rem;
+}
+
+#postdivrich {
+  background-color: #fff;
+  padding: 1rem;
+  border: 0;
+  box-shadow: 0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15);
+  border-radius: 4px;
+}
+
+#minor-publishing-actions {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+div.mce-toolbar-grp,
+.html-active .switch-html,
+.tmce-active .switch-tmce,
+.quicktags-toolbar,
+.alternate,
+.striped>tbody>:nth-child(odd),
+ul.striped>:nth-child(odd) {
+  background-color: #FAFBFC !important;
+}
+
+#postimagediv img {
+  max-width: 350px !important;
+  margin: auto !important;
+  border-radius: 5px;
+  overflow: hidden;
+  border: none !important;
+  // box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.52);
+  display: block;
+}
+
+#postimagediv .inside a {
+  min-height: 200px;
+  text-align: center;
+  margin: auto;
+  background: center no-repeat url('./images/photos.svg');
+  background-size: 70% 70%;
+}
+
+#edit-slug-box {
+  margin-bottom: .5rem;
+}
+
+#wp-content-editor-tools {
+  background-color: #fff;
+}
+
+#major-publishing-actions,
+#post-status-info,
+html #woocommerce-order-items .wc-order-data-row,
+html #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items thead th,
+html ul.order_notes li.system-note .note_content {
+  background-color: #F9FAFB;
+}
+
+#publish {
+  background-image: url('./images/desktop.svg');
+  padding: 2px 15px 2px 2.5rem;
+  background-position: 10px center;
+  background-size: 20% 65%;
+  background-repeat: no-repeat;
+  height: auto;
+  // text-transform: uppercase;
+  font-weight: 600;
+}
+
+
+
+// User page
+
+.form-table {
+  display: block;
+  background-color: #fff;
+  padding: 1rem;
+  border: 0;
+  box-shadow: 0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15);
+  border-radius: 4px;
+}
+
+
 
 // Remove unused post boxes
 .postbox#commentsdiv,
@@ -87,5 +216,112 @@ div.postbox  {
 // Beaver builder
 
 .fl-settings-heading img {
+  display: none !important;
+}
+
+
+// Jetpack
+
+#jetpack_summary_widget .button,
+#jetpack_summary_widget .akismet {
+  display: none;
+}
+
+// WooCommerce
+
+#woocommerce-order-notes {
+  padding-bottom: 1rem;
+}
+
+html #woocommerce-order-items .woocommerce_order_items_wrapper table.woocommerce_order_items tbody tr:first-child td {
+  border-top: 8px solid  #F9FAFB;
+}
+
+html ul.order_notes li.system-note .note_content::after {
+  border-color: #F9FAFB transparent;
+}
+
+html #woocommerce_dashboard_recent_reviews .star-rating span::before {
+  color: #e7b933;
+}
+
+html table.wc-shipping-classes td.wc-shipping-zone-method-blank-state li,
+html table.wc-shipping-classes td.wc-shipping-zone-method-blank-state p,
+html table.wc-shipping-classes td.wc-shipping-zones-blank-state li,
+html table.wc-shipping-classes td.wc-shipping-zones-blank-state p,
+html table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state li,
+html table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state p,
+html table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state li,
+html table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state p,
+html table.wc-shipping-zones td.wc-shipping-zone-method-blank-state li,
+html table.wc-shipping-zones td.wc-shipping-zone-method-blank-state p,
+html table.wc-shipping-zones td.wc-shipping-zones-blank-state li,
+html table.wc-shipping-zones td.wc-shipping-zones-blank-state p {
+  color: inherit;
+}
+
+html table.wc-shipping-classes td.wc-shipping-zone-method-blank-state .button-primary,
+html table.wc-shipping-classes td.wc-shipping-zones-blank-state .button-primary,
+html table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state .button-primary,
+html table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state .button-primary,
+html table.wc-shipping-zones td.wc-shipping-zone-method-blank-state .button-primary,
+html table.wc-shipping-zones td.wc-shipping-zones-blank-state .button-primary,
+html .woocommerce-BlankState a.button-primary,
+html .woocommerce-BlankState button.button-primary,
+html .woocommerce-message a.button-primary,
+html .woocommerce-message button.button-primary {
+  background-color: #0073aa;
+  border: 0;
+  text-shadow: none;
+  box-shadow: 0;
+}
+
+html table.wc-shipping-classes td.wc-shipping-zone-method-blank-state,
+html table.wc-shipping-classes td.wc-shipping-zones-blank-state,
+html table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state,
+html table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state,
+html table.wc-shipping-zones td.wc-shipping-zone-method-blank-state,
+html table.wc-shipping-zones td.wc-shipping-zones-blank-state {
+  background-color: #F9FAFB !important;
+}
+
+html table.wc-shipping-classes td.wc-shipping-zone-method-blank-state::before,
+html table.wc-shipping-classes td.wc-shipping-zones-blank-state::before,
+html table.wc-shipping-zone-methods td.wc-shipping-zone-method-blank-state::before,
+html table.wc-shipping-zone-methods td.wc-shipping-zones-blank-state::before,
+html table.wc-shipping-zones td.wc-shipping-zone-method-blank-state::before,
+html table.wc-shipping-zones td.wc-shipping-zones-blank-state::before {
+  color: #e8ebee;
+}
+
+html .status-enabled::before {
+  color: #0073aa;;
+}
+
+
+// Yoasy SEO
+
+.wpseo-tab-video-container,
+.wpseo-metabox-buy-premium,
+.wpseo-tab-add-keyword {
+  display: none !important;
+}
+
+html body #wpseo-dashboard-overview .onpage .button.landing-page {
+    border-color: #1e567a #1b336f #1b426f;
+    color: #fff;
+    background: #2844a4;
+    box-shadow: none ;
+}
+
+
+
+
+// dn
+
+#add_pod_button,
+#wp-admin-bar-wp-logo,
+#wp-admin-bar-search,
+#mceu_13 {
   display: none !important;
 }

@@ -3,7 +3,7 @@
 Plugin Name: NΞXT
 Plugin URI: https://github.com/engag3/wc-wholesale-products
 Description: Products in the "Wholesale" category will only be visible to users with the "Wholesale" user role.
-Version: 1.0.1
+Version: 1.0.2
 Author: Ξ Π G A G Ξ _ M Ξ D I A™
 Author URI: https://www.engag3.media
 Tags:
