@@ -3,7 +3,7 @@
 Plugin Name: NΞXT
 Plugin URI: https://github.com/engag3/wc-wholesale-products
 Description: Products in the "Wholesale" category will only be visible to users with the "Wholesale" user role.
-Version: 1.0.2
+Version: 1.0.3
 Author: Ξ Π G A G Ξ _ M Ξ D I A™
 Author URI: https://www.engag3.media
 Tags:
@@ -35,3 +35,17 @@ function load_admin_styles() {
   // wp_enqueue_style( 'admin_css_bar', get_template_directory_uri() . '/admin-style-bar.css', false, '1.0.0' );
 }
 add_action( 'admin_enqueue_scripts', 'load_admin_styles' );
+
+
+
+// Remove Howdy
+function replace_howdy($wp_admin_bar) {
+	$my_account=$wp_admin_bar->get_node('my-account');
+	$newtitle = str_replace('Howdy,', '', $my_account->title );
+	$wp_admin_bar->add_node(array(
+		'id' => 'my-account',
+		'title' => $newtitle,
+		)
+	);
+}
+add_filter('admin_bar_menu', 'replace_howdy',25);
