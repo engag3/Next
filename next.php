@@ -1,13 +1,14 @@
 <?php
 /*!
 Plugin Name: NΞXT
-Plugin URI: https://github.com/engag3/wc-wholesale-products
+Plugin URI: https://github.com/engag3/Next
 Description: Products in the "Wholesale" category will only be visible to users with the "Wholesale" user role.
 Version: 1.0.3
 Author: Ξ Π G A G Ξ _ M Ξ D I A™
 Author URI: https://www.engag3.media
 Tags:
-GitHub Plugin URI: https://github.com/engag3/wc-wholesale-products
+GitHub Plugin URI: engag3/Next
+GitHub Plugin URI: https://github.com/engag3/Next
 GitHub Branch: master
 
 
